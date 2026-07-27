@@ -4,9 +4,6 @@ skills:
   - id: math-glossary
     path: skills/math-glossary
     summary: Build and maintain bilingual mathematical glossaries.
-    state: local-candidate
-    publication: blocked
-    blockers:
-      - contributor-publication-authorization
-      - repository-license
-      - third-party-material-review
+    state: release-candidate
+    publication: ready-for-remote
+    blockers: []

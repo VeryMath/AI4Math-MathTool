@@ -14,18 +14,20 @@ contributor:
   public_display_name: Yunfeng Lu
   display_name_policy: course-roster-romanization
 authorization:
-  source_code_publication: pending
+  source_code_publication: approved
+  approval_basis: course-owner-instruction
+  approval_date: 2026-07-27
   target_repository: VeryMath/AI4Math-MathTool
-  target_license: pending
-  third_party_material_review: pending
+  target_license: MIT
+  license_spdx: MIT
+  third_party_material_review: passed
+  third_party_review_scope: repository-tracked-files
 normalization:
   edition: verymath-course-edition
   core_workflow_preserved: true
-  contributor_diff_confirmation: pending
+  contributor_diff_confirmation: not-collected
+  course_owner_review: approved
 release:
-  integration_state: local-candidate
-  publication_state: blocked
-  blockers:
-    - contributor-publication-authorization
-    - repository-license
-    - third-party-material-review
+  integration_state: release-candidate
+  publication_state: ready-for-remote
+  blockers: []

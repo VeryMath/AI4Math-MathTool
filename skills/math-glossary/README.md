@@ -40,6 +40,8 @@ python3 -m pip install -r requirements-ai.txt
 
 Review dependency installation with the user before installing packages.
 `mdict-utils` is optional and needed only for MDX extraction.
+The Web UI has no authentication and should remain bound to its default
+loopback address.
 
 ## Quick smoke test
 
@@ -77,7 +79,9 @@ boundary.
 
 ## Publication status
 
-This is an unpublished local candidate. Public release is blocked until the
-contributor authorization, license, and third-party material review in
-[`PROVENANCE.yaml`](PROVENANCE.yaml) are confirmed. The public contributor name
-is standardized as **Yunfeng Lu** under the course-wide English-name policy.
+This is an MIT-licensed local release candidate, ready for remote publication.
+The publication instruction, normalization approval, and third-party review
+are recorded in [`PROVENANCE.yaml`](PROVENANCE.yaml). It is not described as a
+public release until the remote repository, passing CI run, and release tag
+exist. The public contributor name is standardized as **Yunfeng Lu** under the
+course-wide English-name policy.

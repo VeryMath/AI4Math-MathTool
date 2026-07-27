@@ -35,8 +35,8 @@ changing their content meaning.
   CSV/TSV/JSON/YAML formats already promised by the original workflow.
 - Added `PROVENANCE.yaml`, this normalization record, dependency manifests,
   generated OpenAI agent metadata, and isolated tests.
-- Added the repository router, registry, contribution record, and explicit
-  license-status gate.
+- Added the repository router, registry, contribution record, MIT license,
+  third-party review, security policy, CI, and publication guide.
 
 ## Portability and safety changes
 
@@ -71,12 +71,18 @@ changing their content meaning.
 - Example enrichment still batches missing examples through an
   OpenAI-compatible chat-completions API when explicitly configured.
 
-## Pending confirmation
+## Release approval and review state
 
-- Contributor approval of this normalization diff
-- Authorization to publish the contribution
-- Repository license
-- Third-party dictionary, corpus, font, template, and Web asset review
+- On 2026-07-27, the course owner instructed publication under the MIT license
+  and approved the VeryMath course edition.
+- The contributor-specific normalization diff was not separately confirmed;
+  this distinction remains explicit in `PROVENANCE.yaml`.
+- The original archive checksum was reverified. The original and normalized
+  package contain no vendored dictionary, corpus, font file, image, Web asset,
+  or third-party source tree. Font names in CSS are system fallbacks only.
+- User-supplied source materials and derived glossary data remain outside this
+  repository and require their own rights review.
 
-Until these items are confirmed, this course edition must remain private and
-must not be described as released.
+The course edition is ready for remote publication but is not described as
+publicly released until the GitHub repository, passing CI run, and release tag
+exist.

@@ -15,7 +15,8 @@ contracts and runnable implementations. Keep every tool isolated under
   `NORMALIZATION.md`.
 - Do not publish original course archives, private intake records, credentials,
   local absolute paths, or unreviewed third-party data.
-- Do not add a repository license until the rights holder has approved it.
+- Preserve the repository's MIT license and keep third-party license boundaries
+  documented in `THIRD_PARTY.md`.
 
 ## Validation
 

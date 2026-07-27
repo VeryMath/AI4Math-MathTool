@@ -34,6 +34,7 @@ python3 -m pip install -r requirements-ai.txt
 ```
 
 安装依赖前应先向用户说明并获得确认。`mdict-utils` 仅在解包 MDX 时需要。
+Web 界面没有身份认证，应保持默认的 loopback 绑定，不要暴露到不可信网络。
 
 ## 最小验证
 
@@ -70,6 +71,7 @@ python3 scripts/glossary_web.py \
 
 ## 发布状态
 
-当前版本只是尚未公开的本地候选。在
-[`PROVENANCE.yaml`](PROVENANCE.yaml) 中的贡献者授权、许可证和第三方材料审查
-确认前，不得公开发布。贡献者公开姓名按课程统一规则标为 **Yunfeng Lu**。
+当前版本是采用 MIT 许可、可以进入远端发布流程的本地发布候选。公开指令、课程版
+整理批准和第三方材料审查已记录在 [`PROVENANCE.yaml`](PROVENANCE.yaml)。
+在公开仓库、通过的 CI 运行与 release tag 实际存在前，不把它描述为已公开发布。
+贡献者公开姓名按课程统一规则标为 **Yunfeng Lu**。

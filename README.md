@@ -8,7 +8,7 @@ runtime behavior.
 
 | Tool | Purpose | Status |
 | --- | --- | --- |
-| [`math-glossary`](skills/math-glossary/) | Build, review, back up, import, export, and maintain bilingual mathematical glossaries | Local course-edition candidate; publication blocked pending contributor authorization and license |
+| [`math-glossary`](skills/math-glossary/) | Build, review, back up, import, export, and maintain bilingual mathematical glossaries | MIT-licensed local release candidate; ready for remote publication |
 
 Each package keeps its own workflow, dependencies, provenance, normalization
 record, and tests. Course origin is recorded as metadata; it does not determine
@@ -23,11 +23,13 @@ python3 -m unittest discover -s skills/math-glossary/tests -v
 
 ## Publication status
 
-This checkout is an unpublished review candidate. The original submission is
-stored separately in a teacher-controlled archive and is ignored by Git.
-No public repository or release should be created until the contributor's
-publication authorization, repository license, and third-party material review
-are recorded as confirmed. Contributor names use the course-wide English
-romanization convention.
+This checkout is a tested, unpublished release candidate. It is licensed under
+the [MIT License](LICENSE); the source-publication instruction and third-party
+review are recorded in
+[`skills/math-glossary/PROVENANCE.yaml`](skills/math-glossary/PROVENANCE.yaml).
+The original submission remains in a teacher-controlled, Git-ignored archive.
+Contributor names use the course-wide English romanization convention.
 
-See [LICENSE_STATUS.md](LICENSE_STATUS.md) for the current rights gate.
+See [THIRD_PARTY.md](THIRD_PARTY.md) for dependency and material boundaries,
+[SECURITY.md](SECURITY.md) for safe operation, and
+[PUBLISHING.md](PUBLISHING.md) for the remote publication procedure.

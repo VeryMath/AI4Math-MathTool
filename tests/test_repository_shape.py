@@ -18,7 +18,11 @@ class RepositoryShapeTests(unittest.TestCase):
             "README.zh-CN.md",
             "SKILL.md",
             "CONTRIBUTORS.md",
-            "LICENSE_STATUS.md",
+            "LICENSE",
+            "THIRD_PARTY.md",
+            "SECURITY.md",
+            "PUBLISHING.md",
+            ".github/workflows/ci.yml",
             "skills/registry.yaml",
         ]
         for relative_path in required:
@@ -90,17 +94,62 @@ class RepositoryShapeTests(unittest.TestCase):
         digest = hashlib.sha256(archives[0].read_bytes()).hexdigest()
         self.assertEqual(digest, expected.group(1))
 
-    def test_publication_is_blocked_until_rights_gate_is_complete(self):
+    def test_release_candidate_rights_gate_is_complete(self):
         registry = (
             REPOSITORY_ROOT / "skills" / "registry.yaml"
         ).read_text(encoding="utf-8")
         provenance = (PACKAGE_ROOT / "PROVENANCE.yaml").read_text(
             encoding="utf-8"
         )
-        self.assertIn("publication: blocked", registry)
-        self.assertIn("publication_state: blocked", provenance)
-        self.assertFalse((REPOSITORY_ROOT / "LICENSE").exists())
-        self.assertTrue((REPOSITORY_ROOT / "LICENSE_STATUS.md").is_file())
+        license_text = (REPOSITORY_ROOT / "LICENSE").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("publication: ready-for-remote", registry)
+        self.assertIn("publication_state: ready-for-remote", provenance)
+        self.assertIn("source_code_publication: approved", provenance)
+        self.assertIn("target_license: MIT", provenance)
+        self.assertIn("third_party_material_review: passed", provenance)
+        self.assertIn("blockers: []", registry)
+        self.assertIn("blockers: []", provenance)
+        self.assertTrue(license_text.startswith("MIT License\n"))
+        self.assertIn("Yunfeng Lu and VeryMath contributors", license_text)
+        self.assertFalse(
+            (REPOSITORY_ROOT / "LICENSE_STATUS.md").exists()
+        )
+
+    def test_third_party_boundary_is_documented(self):
+        notice = (REPOSITORY_ROOT / "THIRD_PARTY.md").read_text(
+            encoding="utf-8"
+        )
+        for expected in [
+            "does not vendor third-party source code",
+            "Flask",
+            "BSD-3-Clause",
+            "openpyxl",
+            "MIT/Expat",
+            "PyYAML",
+            "openai-python",
+            "Apache-2.0",
+            "mdict-utils",
+            "User-supplied dictionaries",
+        ]:
+            with self.subTest(expected=expected):
+                self.assertIn(expected, notice)
+
+    def test_ci_runs_repository_and_package_tests(self):
+        workflow = (
+            REPOSITORY_ROOT / ".github" / "workflows" / "ci.yml"
+        ).read_text(encoding="utf-8")
+        self.assertIn('python-version: ["3.9", "3.12"]', workflow)
+        self.assertIn(
+            "python -m unittest discover -s tests -v",
+            workflow,
+        )
+        self.assertIn(
+            "python -m unittest discover -s "
+            "skills/math-glossary/tests -v",
+            workflow,
+        )
 
     def test_contributor_uses_course_romanization_policy(self):
         provenance = (PACKAGE_ROOT / "PROVENANCE.yaml").read_text(

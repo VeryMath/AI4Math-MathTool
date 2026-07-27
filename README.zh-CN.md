@@ -7,7 +7,7 @@ AI4Math-MathTool 是 VeryMath 用于承载独立数学工具的仓库。进入�
 
 | 工具 | 用途 | 状态 |
 | --- | --- | --- |
-| [`math-glossary`](skills/math-glossary/) | 构建、审阅、备份、导入、导出和维护双语数学术语库 | 本地课程版候选；贡献者授权与许可证确认前禁止公开发布 |
+| [`math-glossary`](skills/math-glossary/) | 构建、审阅、备份、导入、导出和维护双语数学术语库 | MIT 许可的本地发布候选；可以进入远端发布流程 |
 
 每个 package 独立保留自己的工作流、依赖、来源、规范化记录和测试。课程来源只作为
 元数据，不作为代码仓库的职责边界。
@@ -21,9 +21,12 @@ python3 -m unittest discover -s skills/math-glossary/tests -v
 
 ## 发布状态
 
-当前 checkout 是尚未公开的审查候选。原始提交另存于教师控制、Git 忽略的档案目录。
-贡献者姓名统一按课程名册转写为英文 `Given-name Surname`，不再单独征集署名格式。
-在贡献者公开授权、仓库许可证和第三方材料审查全部确认前，不得创建公开仓库或发布
-版本。
+当前 checkout 是已完成本地验证、尚未公开的发布候选，采用
+[MIT License](LICENSE)。源码公开指令与第三方材料审查结果记录在
+[`skills/math-glossary/PROVENANCE.yaml`](skills/math-glossary/PROVENANCE.yaml)。
+原始提交仍单独保存在教师控制、Git 忽略的档案目录；贡献者姓名统一按课程名册转写为
+英文 `Given-name Surname`。
 
-当前权利门槛见 [LICENSE_STATUS.md](LICENSE_STATUS.md)。
+依赖与材料边界见 [THIRD_PARTY.md](THIRD_PARTY.md)，安全说明见
+[SECURITY.md](SECURITY.md)，创建远端、运行 CI 与发布版本的步骤见
+[PUBLISHING.md](PUBLISHING.md)。

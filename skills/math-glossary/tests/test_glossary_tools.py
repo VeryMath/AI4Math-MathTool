@@ -538,6 +538,29 @@ class WebApiTests(unittest.TestCase):
     def tearDown(self):
         self.temporary_dir.cleanup()
 
+    def test_web_cli_defaults_to_loopback_and_rejects_implicit_remote_binding(
+        self,
+    ):
+        parsed = self.web.build_parser().parse_args([
+            "--glossary",
+            str(self.glossary),
+        ])
+        self.assertEqual(parsed.host, "127.0.0.1")
+        self.assertFalse(parsed.allow_remote)
+
+        with mock.patch.object(self.web, "configure") as configure:
+            self.assertEqual(
+                self.web.main([
+                    "--glossary",
+                    str(self.glossary),
+                    "--host",
+                    "0.0.0.0",
+                    "--no-browser",
+                ]),
+                2,
+            )
+        configure.assert_not_called()
+
     def test_read_search_stats_and_shutdown_fallback(self):
         terms = self.client.get("/api/terms?q=man").get_json()
         self.assertEqual(terms["total"], 1)
