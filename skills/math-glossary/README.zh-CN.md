@@ -71,5 +71,5 @@ python3 scripts/glossary_web.py \
 ## 发布状态
 
 当前版本只是尚未公开的本地候选。在
-[`PROVENANCE.yaml`](PROVENANCE.yaml) 中的贡献者授权、公开署名偏好、许可证和
-第三方材料审查确认前，不得公开发布。
+[`PROVENANCE.yaml`](PROVENANCE.yaml) 中的贡献者授权、许可证和第三方材料审查
+确认前，不得公开发布。贡献者公开姓名按课程统一规则标为 **Yunfeng Lu**。

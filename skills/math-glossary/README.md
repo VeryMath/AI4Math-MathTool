@@ -78,6 +78,6 @@ boundary.
 ## Publication status
 
 This is an unpublished local candidate. Public release is blocked until the
-contributor authorization, public attribution preference, license, and
-third-party material review in [`PROVENANCE.yaml`](PROVENANCE.yaml) are
-confirmed.
+contributor authorization, license, and third-party material review in
+[`PROVENANCE.yaml`](PROVENANCE.yaml) are confirmed. The public contributor name
+is standardized as **Yunfeng Lu** under the course-wide English-name policy.

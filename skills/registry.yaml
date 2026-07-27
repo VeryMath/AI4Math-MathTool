@@ -8,6 +8,5 @@ skills:
     publication: blocked
     blockers:
       - contributor-publication-authorization
-      - public-attribution-preference
       - repository-license
       - third-party-material-review

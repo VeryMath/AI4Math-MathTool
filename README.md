@@ -26,7 +26,8 @@ python3 -m unittest discover -s skills/math-glossary/tests -v
 This checkout is an unpublished review candidate. The original submission is
 stored separately in a teacher-controlled archive and is ignored by Git.
 No public repository or release should be created until the contributor's
-publication authorization, attribution preference, repository license, and
-third-party material review are recorded as confirmed.
+publication authorization, repository license, and third-party material review
+are recorded as confirmed. Contributor names use the course-wide English
+romanization convention.
 
 See [LICENSE_STATUS.md](LICENSE_STATUS.md) for the current rights gate.

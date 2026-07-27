@@ -22,7 +22,8 @@ python3 -m unittest discover -s skills/math-glossary/tests -v
 ## 发布状态
 
 当前 checkout 是尚未公开的审查候选。原始提交另存于教师控制、Git 忽略的档案目录。
-在贡献者公开授权、署名偏好、仓库许可证和第三方材料审查全部确认前，不得创建公开
-仓库或发布版本。
+贡献者姓名统一按课程名册转写为英文 `Given-name Surname`，不再单独征集署名格式。
+在贡献者公开授权、仓库许可证和第三方材料审查全部确认前，不得创建公开仓库或发布
+版本。
 
 当前权利门槛见 [LICENSE_STATUS.md](LICENSE_STATUS.md)。

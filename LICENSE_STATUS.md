@@ -2,9 +2,9 @@
 
 No open-source license has been granted for this repository yet.
 
-The source contribution authorization, public attribution preference, intended
-repository license, and third-party material review are all pending. Until they
-are confirmed in writing:
+The source contribution authorization, intended repository license, and
+third-party material review are all pending. Until they are confirmed in
+writing:
 
 - this checkout may be used only for internal review and testing;
 - no public repository, package, archive, or release may be created from it;

@@ -74,7 +74,6 @@ changing their content meaning.
 ## Pending confirmation
 
 - Contributor approval of this normalization diff
-- Preferred public display name
 - Authorization to publish the contribution
 - Repository license
 - Third-party dictionary, corpus, font, template, and Web asset review

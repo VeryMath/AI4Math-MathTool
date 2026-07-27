@@ -11,8 +11,8 @@ submission:
   archive_scope: teacher-controlled-private-intake
   archive_in_git: false
 contributor:
-  public_display_name: pending-consent
-  public_attribution_consent: pending
+  public_display_name: Yunfeng Lu
+  display_name_policy: course-roster-romanization
 authorization:
   source_code_publication: pending
   target_repository: VeryMath/AI4Math-MathTool
@@ -27,6 +27,5 @@ release:
   publication_state: blocked
   blockers:
     - contributor-publication-authorization
-    - public-attribution-preference
     - repository-license
     - third-party-material-review

@@ -102,6 +102,20 @@ class RepositoryShapeTests(unittest.TestCase):
         self.assertFalse((REPOSITORY_ROOT / "LICENSE").exists())
         self.assertTrue((REPOSITORY_ROOT / "LICENSE_STATUS.md").is_file())
 
+    def test_contributor_uses_course_romanization_policy(self):
+        provenance = (PACKAGE_ROOT / "PROVENANCE.yaml").read_text(
+            encoding="utf-8"
+        )
+        registry = (
+            REPOSITORY_ROOT / "skills" / "registry.yaml"
+        ).read_text(encoding="utf-8")
+        self.assertIn("public_display_name: Yunfeng Lu", provenance)
+        self.assertIn(
+            "display_name_policy: course-roster-romanization",
+            provenance,
+        )
+        self.assertNotIn("public-attribution-preference", registry)
+
 
 if __name__ == "__main__":
     unittest.main()
