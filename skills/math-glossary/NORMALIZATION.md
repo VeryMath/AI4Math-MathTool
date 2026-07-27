@@ -83,6 +83,6 @@ changing their content meaning.
 - User-supplied source materials and derived glossary data remain outside this
   repository and require their own rights review.
 
-The course edition is ready for remote publication but is not described as
-publicly released until the GitHub repository, passing CI run, and release tag
-exist.
+The course edition is published in the canonical
+`VeryMath/AI4Math-MathTool` repository as `v0.1.0`. The release follows passing
+GitHub CI runs on Python 3.9 and 3.12.

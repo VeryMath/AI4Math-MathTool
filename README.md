@@ -8,7 +8,7 @@ runtime behavior.
 
 | Tool | Purpose | Status |
 | --- | --- | --- |
-| [`math-glossary`](skills/math-glossary/) | Build, review, back up, import, export, and maintain bilingual mathematical glossaries | MIT-licensed local release candidate; ready for remote publication |
+| [`math-glossary`](skills/math-glossary/) | Build, review, back up, import, export, and maintain bilingual mathematical glossaries | Released in [`v0.1.0`](https://github.com/VeryMath/AI4Math-MathTool/releases/tag/v0.1.0) under the MIT License |
 
 Each package keeps its own workflow, dependencies, provenance, normalization
 record, and tests. Course origin is recorded as metadata; it does not determine
@@ -23,9 +23,10 @@ python3 -m unittest discover -s skills/math-glossary/tests -v
 
 ## Publication status
 
-This checkout is a tested, unpublished release candidate. It is licensed under
-the [MIT License](LICENSE); the source-publication instruction and third-party
-review are recorded in
+This is the public canonical repository. The initial
+[`v0.1.0`](https://github.com/VeryMath/AI4Math-MathTool/releases/tag/v0.1.0)
+release is licensed under the [MIT License](LICENSE); the source-publication
+instruction and third-party review are recorded in
 [`skills/math-glossary/PROVENANCE.yaml`](skills/math-glossary/PROVENANCE.yaml).
 The original submission remains in a teacher-controlled, Git-ignored archive.
 Contributor names use the course-wide English romanization convention.
