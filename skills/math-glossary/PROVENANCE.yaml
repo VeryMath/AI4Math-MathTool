@@ -1,0 +1,32 @@
+schema_version: 1
+package_id: math-glossary
+course:
+  id: 2026-summer-ai-research-practice-math
+  name_zh: 人工智能赋能科研实践（数学）
+submission:
+  internal_id: course-2026-summer-03
+  original_filename: private-intake-record
+  sha256: 872877a01ca5e57d19a975dbb040dbab2052f1dc6561b1258f1ff50c7b843705
+  checksum_verified: true
+  archive_scope: teacher-controlled-private-intake
+  archive_in_git: false
+contributor:
+  public_display_name: pending-consent
+  public_attribution_consent: pending
+authorization:
+  source_code_publication: pending
+  target_repository: VeryMath/AI4Math-MathTool
+  target_license: pending
+  third_party_material_review: pending
+normalization:
+  edition: verymath-course-edition
+  core_workflow_preserved: true
+  contributor_diff_confirmation: pending
+release:
+  integration_state: local-candidate
+  publication_state: blocked
+  blockers:
+    - contributor-publication-authorization
+    - public-attribution-preference
+    - repository-license
+    - third-party-material-review

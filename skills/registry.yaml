@@ -1,0 +1,13 @@
+schema_version: 1
+repository: AI4Math-MathTool
+skills:
+  - id: math-glossary
+    path: skills/math-glossary
+    summary: Build and maintain bilingual mathematical glossaries.
+    state: local-candidate
+    publication: blocked
+    blockers:
+      - contributor-publication-authorization
+      - public-attribution-preference
+      - repository-license
+      - third-party-material-review

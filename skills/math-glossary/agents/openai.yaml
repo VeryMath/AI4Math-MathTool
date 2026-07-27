@@ -1,0 +1,4 @@
+interface:
+  display_name: "Math Glossary"
+  short_description: "Build and maintain bilingual mathematical glossaries"
+  default_prompt: "Use $math-glossary to build or maintain a bilingual mathematical glossary from my source files."

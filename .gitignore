@@ -1,0 +1,21 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+.env.*
+build/
+dist/
+*.egg-info/
+
+# Teacher-controlled source submissions and review records are never public.
+.intake/
+
+# Runtime glossary outputs.
+glossary.json
+glossary_*.xlsx
+glossary_backup_*.json
+修改记录.md
+扩充记录.md
