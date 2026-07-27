@@ -1,5 +1,7 @@
 # AI4Math-MathTool
 
+[中文说明](README.zh-CN.md)
+
 AI4Math-MathTool is the VeryMath repository for standalone mathematical tools
 with stable data contracts, executable helpers, and independently testable
 runtime behavior.
