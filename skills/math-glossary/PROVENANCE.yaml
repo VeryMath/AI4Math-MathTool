@@ -28,6 +28,8 @@ normalization:
   contributor_diff_confirmation: not-collected
   course_owner_review: approved
 release:
-  integration_state: release-candidate
-  publication_state: ready-for-remote
+  integration_state: released
+  publication_state: public
+  repository_url: https://github.com/VeryMath/AI4Math-MathTool
+  initial_release: v0.1.0
   blockers: []

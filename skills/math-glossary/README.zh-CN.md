@@ -71,7 +71,8 @@ python3 scripts/glossary_web.py \
 
 ## 发布状态
 
-当前版本是采用 MIT 许可、可以进入远端发布流程的本地发布候选。公开指令、课程版
-整理批准和第三方材料审查已记录在 [`PROVENANCE.yaml`](PROVENANCE.yaml)。
-在公开仓库、通过的 CI 运行与 release tag 实际存在前，不把它描述为已公开发布。
-贡献者公开姓名按课程统一规则标为 **Yunfeng Lu**。
+当前 package 已按 MIT 许可发布为
+[`v0.1.0`](https://github.com/VeryMath/AI4Math-MathTool/releases/tag/v0.1.0)。
+公开指令、课程版整理批准和第三方材料审查已记录在
+[`PROVENANCE.yaml`](PROVENANCE.yaml)。贡献者公开姓名按课程统一规则标为
+**Yunfeng Lu**。

@@ -79,9 +79,9 @@ boundary.
 
 ## Publication status
 
-This is an MIT-licensed local release candidate, ready for remote publication.
-The publication instruction, normalization approval, and third-party review
-are recorded in [`PROVENANCE.yaml`](PROVENANCE.yaml). It is not described as a
-public release until the remote repository, passing CI run, and release tag
-exist. The public contributor name is standardized as **Yunfeng Lu** under the
-course-wide English-name policy.
+This package is released as
+[`v0.1.0`](https://github.com/VeryMath/AI4Math-MathTool/releases/tag/v0.1.0)
+under the MIT License. The publication instruction, normalization approval,
+and third-party review are recorded in
+[`PROVENANCE.yaml`](PROVENANCE.yaml). The public contributor name is
+standardized as **Yunfeng Lu** under the course-wide English-name policy.

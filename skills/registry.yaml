@@ -4,6 +4,8 @@ skills:
   - id: math-glossary
     path: skills/math-glossary
     summary: Build and maintain bilingual mathematical glossaries.
-    state: release-candidate
-    publication: ready-for-remote
+    state: released
+    publication: public
+    repository: https://github.com/VeryMath/AI4Math-MathTool
+    release: v0.1.0
     blockers: []

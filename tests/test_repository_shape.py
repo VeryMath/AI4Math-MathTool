@@ -94,7 +94,7 @@ class RepositoryShapeTests(unittest.TestCase):
         digest = hashlib.sha256(archives[0].read_bytes()).hexdigest()
         self.assertEqual(digest, expected.group(1))
 
-    def test_release_candidate_rights_gate_is_complete(self):
+    def test_released_rights_gate_is_complete(self):
         registry = (
             REPOSITORY_ROOT / "skills" / "registry.yaml"
         ).read_text(encoding="utf-8")
@@ -104,8 +104,14 @@ class RepositoryShapeTests(unittest.TestCase):
         license_text = (REPOSITORY_ROOT / "LICENSE").read_text(
             encoding="utf-8"
         )
-        self.assertIn("publication: ready-for-remote", registry)
-        self.assertIn("publication_state: ready-for-remote", provenance)
+        self.assertIn("state: released", registry)
+        self.assertIn("publication: public", registry)
+        self.assertIn("publication_state: public", provenance)
+        self.assertIn("initial_release: v0.1.0", provenance)
+        self.assertIn(
+            "https://github.com/VeryMath/AI4Math-MathTool",
+            provenance,
+        )
         self.assertIn("source_code_publication: approved", provenance)
         self.assertIn("target_license: MIT", provenance)
         self.assertIn("third_party_material_review: passed", provenance)
