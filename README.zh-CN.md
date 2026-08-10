@@ -2,8 +2,8 @@
 
 [English](README.md)
 
-AI4Math-MathTool 是 VeryMath 用于承载独立数学工具的仓库。进入本仓库的工具应具有
-稳定的数据合同、可执行脚本和可独立验证的运行行为。
+AI4Math-MathTool 是 VeryMath 用于承载独立数学工具和轻量 coding-agent
+适配器的仓库。每个 package 都提供明确的工作流、来源记录和可独立验证的行为。
 
 ## 已纳入工具
 
