@@ -25,7 +25,9 @@ Run:
 ```bash
 python3 -m unittest discover -s tests -v
 python3 -m unittest discover -s skills/math-glossary/tests -v
+python3 -m unittest discover -s skills/matlab-runner/tests -v
 ```
 
 Package-level tests must use temporary directories and must not mutate source
-fixtures or a user's glossary.
+fixtures, a user's glossary, MATLAB files, or a shared MATLAB session. Static
+`matlab-runner` tests do not establish that MATLAB executed successfully.

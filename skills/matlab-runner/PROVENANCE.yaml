@@ -1,0 +1,30 @@
+schema_version: 1
+package_id: matlab-runner
+submission:
+  original_filename: matlab-runner-v0.1.8-20260803.zip
+  sha256: 4e6b2f3c83abffd28148bcc36d4f96906d64be14b282fed9db2d32c1d89ad5f3
+  checksum_verified: true
+  archive_scope: contributor-controlled-source
+  archive_in_git: false
+contributor:
+  public_display_name: njustar2002
+  public_email: njustar2002@vip.163.com
+authorization:
+  source_code_publication: approved
+  approval_basis: repository-owner-confirmation
+  approval_date: 2026-08-10
+  target_repository: VeryMath/AI4Math-MathTool
+  target_license: MIT
+  license_spdx: MIT
+  third_party_material_review: passed
+  third_party_review_scope: normalized-public-files
+normalization:
+  edition: verymath-platform-neutral-edition
+  core_workflow_preserved: true
+  contributor_diff_confirmation: not-collected
+release:
+  integration_state: review-candidate
+  publication_state: public-candidate
+  repository_url: https://github.com/VeryMath/AI4Math-MathTool
+  initial_release: unreleased
+  blockers: []

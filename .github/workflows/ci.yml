@@ -35,3 +35,5 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Test math-glossary
         run: python -m unittest discover -s skills/math-glossary/tests -v
+      - name: Test matlab-runner adapter
+        run: python -m unittest discover -s skills/matlab-runner/tests -v

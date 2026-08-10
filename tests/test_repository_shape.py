@@ -3,12 +3,43 @@ from __future__ import annotations
 import hashlib
 import py_compile
 import re
+import tempfile
 import unittest
 from pathlib import Path
+
+import yaml
 
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 PACKAGE_ROOT = REPOSITORY_ROOT / "skills" / "math-glossary"
+
+
+def provenance_digests(skills_root: Path) -> set[str]:
+    digests = set()
+    for provenance_path in sorted(skills_root.glob("*/PROVENANCE.yaml")):
+        provenance = yaml.safe_load(
+            provenance_path.read_text(encoding="utf-8")
+        )
+        digest = provenance.get("submission", {}).get("sha256")
+        if not isinstance(digest, str) or not re.fullmatch(
+            r"[0-9a-f]{64}", digest
+        ):
+            raise AssertionError(
+                f"Invalid submission SHA-256 in {provenance_path}"
+            )
+        digests.add(digest)
+    return digests
+
+
+def unregistered_archives(
+    archives: list[Path], expected_digests: set[str]
+) -> list[str]:
+    return [
+        archive.name
+        for archive in archives
+        if hashlib.sha256(archive.read_bytes()).hexdigest()
+        not in expected_digests
+    ]
 
 
 class RepositoryShapeTests(unittest.TestCase):
@@ -79,20 +110,28 @@ class RepositoryShapeTests(unittest.TestCase):
         )
         self.assertIn(".intake/", gitignore)
 
-        provenance = (PACKAGE_ROOT / "PROVENANCE.yaml").read_text(
-            encoding="utf-8"
-        )
-        expected = re.search(r"sha256: ([0-9a-f]{64})", provenance)
-        self.assertIsNotNone(expected)
+        expected_digests = provenance_digests(REPOSITORY_ROOT / "skills")
 
         archives = list(
             (REPOSITORY_ROOT / ".intake" / "original-submissions").glob("*.zip")
         )
         if not archives:
             self.skipTest("Private intake archive is not present in this checkout")
-        self.assertEqual(len(archives), 1)
-        digest = hashlib.sha256(archives[0].read_bytes()).hexdigest()
-        self.assertEqual(digest, expected.group(1))
+        self.assertEqual(unregistered_archives(archives, expected_digests), [])
+
+    def test_multiple_private_archives_are_supported(self):
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            archive_root = Path(temporary_directory)
+            archives = [archive_root / "one.zip", archive_root / "two.zip"]
+            archives[0].write_bytes(b"first private submission")
+            archives[1].write_bytes(b"second private submission")
+            expected_digests = {
+                hashlib.sha256(archive.read_bytes()).hexdigest()
+                for archive in archives
+            }
+            self.assertEqual(
+                unregistered_archives(archives, expected_digests), []
+            )
 
     def test_released_rights_gate_is_complete(self):
         registry = (
@@ -138,6 +177,7 @@ class RepositoryShapeTests(unittest.TestCase):
             "Apache-2.0",
             "mdict-utils",
             "User-supplied dictionaries",
+            "do not share one server among multiple users",
         ]:
             with self.subTest(expected=expected):
                 self.assertIn(expected, notice)

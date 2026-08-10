@@ -19,3 +19,7 @@ glossary_*.xlsx
 glossary_backup_*.json
 修改记录.md
 扩充记录.md
+
+# Local MATLAB runner artifacts.
+skills/matlab-runner/examples/*.asv
+skills/matlab-runner/examples/damped_sine*.png

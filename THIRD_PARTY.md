@@ -25,3 +25,26 @@ User-supplied dictionaries, corpora, papers, scans, PDFs, spreadsheets, and
 other source materials are not part of this repository. Users are responsible
 for confirming that they may process and redistribute any derived glossary
 content.
+
+## MATLAB Runner boundaries
+
+`skills/matlab-runner` contains routing instructions, references, tests, and
+small original MATLAB examples. It does not vendor MATLAB, MathWorks products,
+the MATLAB MCP Server, the MATLAB Agentic Toolkit, OpenCode, or another coding
+agent. It is a community adapter and is not an official MathWorks or OpenCode
+package.
+
+The following software, when selected by a user, is installed separately and
+remains governed by its upstream terms:
+
+| Dependency | Purpose | Upstream terms |
+| --- | --- | --- |
+| [MATLAB](https://www.mathworks.com/products/matlab.html) and optional toolboxes | Numerical runtime and product-specific functions | MathWorks product license selected by the user or institution |
+| [MATLAB MCP Server](https://github.com/matlab/matlab-mcp-server#licensing-and-usage) | Expose MATLAB execution capabilities to an MCP client | Upstream `LICENSE.md`; use only with MATLAB, do not share one server among multiple users, and contact MathWorks for shared or centralized use |
+| [MATLAB Agentic Toolkit](https://github.com/matlab/matlab-agentic-toolkit) | Optional upstream agentic components | Upstream `LICENSE.md`, including the MathWorks-products use condition |
+| [OpenCode](https://github.com/anomalyco/opencode) | One optional coding-agent client; not required by this package | MIT |
+
+The repository MIT license applies to the normalized `matlab-runner` package,
+not to separately installed MATLAB or MathWorks components. Users must provide
+their own valid MATLAB installation and license and follow each dependency's
+terms.
