@@ -10,6 +10,7 @@ Route each request to the narrowest matching package:
 | Request | Package |
 | --- | --- |
 | Build, update, query, back up, import, export, or review a bilingual mathematical glossary | `skills/math-glossary/SKILL.md` |
+| Explicitly use MATLAB, operate on `.m` files, or obtain MATLAB-specific execution, test, toolbox, license, or numerical-validation evidence | `skills/matlab-runner/SKILL.md` |
 
 Before running a package:
 

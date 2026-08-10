@@ -9,3 +9,11 @@ skills:
     repository: https://github.com/VeryMath/AI4Math-MathTool
     release: v0.1.0
     blockers: []
+  - id: matlab-runner
+    path: skills/matlab-runner
+    summary: Route explicit MATLAB tasks through available MCP capabilities.
+    state: review-candidate
+    publication: public-candidate
+    repository: https://github.com/VeryMath/AI4Math-MathTool
+    release: unreleased
+    blockers: []

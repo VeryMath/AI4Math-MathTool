@@ -17,6 +17,7 @@ python -m pip install \
   -r skills/math-glossary/requirements-ai.txt
 python -m unittest discover -s tests -v
 python -m unittest discover -s skills/math-glossary/tests -v
+python -m unittest discover -s skills/matlab-runner/tests -v
 git status --short
 ```
 
@@ -76,3 +77,11 @@ After the remote URL and passing CI run exist:
 提交作为 `main` 推送，CI 通过后再创建 `v0.1.0` Release。最后才同步
 AI4Math-Skill-Library 与 VeryMath 页面。任何一步都不得上传 `.intake/`、密钥、真实
 术语库或课程原始材料。
+
+## Adding later packages
+
+Later packages such as `matlab-runner` are integrated through a reviewed pull
+request rather than by rewriting the historical `v0.1.0` release. Validate the
+root suite and every affected package suite, inspect the public tree, and merge
+before deciding whether a new repository tag is warranted. Static adapter tests
+must not be described as MATLAB execution evidence.
