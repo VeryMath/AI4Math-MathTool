@@ -247,8 +247,9 @@ options (multiSelect: false):
 
 1. 先问"请提供用于扩充的源文件路径"
 2. 验证路径存在后，询问第4问（是否备份）
-3. 走构建流程（解析→提取→冲突检测→合并）
-4. 完成后自动刷新 Excel 并生成扩充记录
+3. 用户选择备份时，先运行 `scripts/glossary_backup.py` 备份现有 `glossary.json`，确认备份成功后再继续
+4. 走构建流程（解析→提取→冲突检测→合并→写入）
+5. 完成后自动刷新 Excel 并生成扩充记录
 
 **注意：第4问是扩充流程专属问题，不在初始构建的四问交互流程中。初始构建的第3问之后直接进入构建流程，不需要第4问。**
 
@@ -275,8 +276,7 @@ options (multiSelect: false):
 1. JSON 按 en → cn 排序后重新连续分配 idx
 2. 调用 `glossary_export.py` 重新导出 Excel（删除旧 .xlsx，只保留新导出的）
 3. 生成 `扩充记录.md`（上述格式）
-4. 如果用户选择了"需要备份"，先用 `glossary_backup.py` 备份当前 glossary.json
-5. JSON 和 Excel 都要做排序+重编号，保证 idx 连续无断层
+4. JSON 和 Excel 都要做排序+重编号，保证 idx 连续无断层
 
 扩充完成后展示操作指引。
 

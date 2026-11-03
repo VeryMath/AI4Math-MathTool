@@ -56,6 +56,8 @@ changing their content meaning.
   literal text on import.
 - Added schema validation at script boundaries so invalid top-level JSON or
   missing required fields fail clearly before overwriting data.
+- Clarified that English and Chinese terms are both required and that an
+  optional backup must finish before glossary entries are merged or written.
 - Replaced automatic dependency installation instructions with explicit checks
   and user-approved installation commands.
 
